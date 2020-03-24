@@ -1,0 +1,45 @@
+p{
+color:#D4D7FE;
+font-size:30px;
+padding-top: 20px;
+}
+
+button{
+color: white;
+background: red
+}
+center{
+    
+    font-size: 40px;
+    font-weight: bold;
+    font-style: italic;
+    font-stretch: extra-expanded;
+   padding-top: 20px;
+
+}
+.puzzle{
+    color: peachpuff;
+    margin-bottom : 2 rem;
+}
+.jumb{
+    background-image: url('/img/forest\ bird\ never\ wants\ a\ cge..png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+.reset{
+    background-color: cadetblue;
+    border: 2px solid black;
+    border-radius: 20rem;
+    font-size: 40px;
+    padding: 10px;
+    color: black;
+}
+.b{
+    color:black;
+    padding-top: 60;
+}
+.reset:hover {
+  color:peachpuff;
+}
