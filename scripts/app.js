@@ -1,28 +1,31 @@
-
-const puzzleEl = document.querySelector('#puzzle')
-const guessesEl = document.querySelector('#guesses')
-let game1
+const puzzleEl = document.querySelector('#puzzle');
+const guessesEl = document.querySelector('#guesses');
+let game1;
 
 window.addEventListener('keypress', (e) => {
-    const guess = String.fromCharCode(e.charCode)
-    game1.makeGuess(guess)
-    render()
-})
+  const guess = String.fromCharCode(e.charCode);
+  game1.makeGuess(guess);
+  render();
+});
 
+const render = () => {
+  puzzleEl.innerHTML = '';
+  guessesEl.textContent = game1.statusmessage;
+  game1.puzzle.split('').forEach((letter) => {
+    const letterEl = document.createElement('span');
+    letterEl.textContent = letter;
+    puzzleEl.appendChild(letterEl);
+  });
+};
 
-const render=() =>{
-    puzzleEl.innerHTML= game1.puzzle
-    guessesEl.textContent = game1.statusmessage
-}
+const startgame = async () => {
+  const puzzle = await getPuzzle('2');
+  game1 = new Hangman(puzzle, 7);
+  render();
+};
 
-const startgame = async ()=>{
- const puzzle= await getPuzzle('2')
- game1= new Hangman(puzzle,7)
- render()
-}
-
-document.querySelector('.reset').addEventListener('click',startgame)
-startgame()
+document.querySelector('.reset').addEventListener('click', startgame);
+startgame();
 
 /*getPuzzle('2').then((puzzle) => {
     console.log(puzzle)
