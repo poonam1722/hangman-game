@@ -18,16 +18,16 @@ center{
 
 }
 .puzzle{
-    color: peachpuff;
+    color:#D4D7FE;
     margin-bottom : 2 rem;
 }
-.jumb{
+/* .jumb{
     background-image: url('/img/forest\ bird\ never\ wants\ a\ cge..png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
-}
+} */
 .reset{
     background-color: cadetblue;
     border: 2px solid black;
@@ -45,12 +45,14 @@ center{
 background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-input{
-    margin-left:-200px;
-}
+
 html,
 body {
   width: auto !important;
   overflow-x: hidden !important;
+  background:#3A6073;
 
+}
+.guesses{
+    color: #D4D7FE;;
 }
